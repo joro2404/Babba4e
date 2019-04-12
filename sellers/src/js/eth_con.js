@@ -111,7 +111,7 @@ function addProduct() {
     let contract = createContractObj();
     let params = createComposeJSON(id);
 
-    contract.addProduct.sendTransaction(params.company, params.origin, params.name, params.description, id, { from: web3.eth.coinbase }, function(error, result) {
+    contract.addProduct.sendTransaction(params.company, params.origin, params.name, params.description, id, { from: web3.eth.accounts[0] }, function(error, result) {
         if (error) { console.log('error'); }
         else { console.log('success'); }
     });
