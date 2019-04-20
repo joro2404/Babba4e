@@ -128,7 +128,7 @@
         	outputDiv.innerHTML = generatedTable;
 
         	var i = 0;
-        	while(result[6][i] != 0) {
+        	while(result[6][i] != 0 && result[6][i] !== undefined) {
     			let current_row = document.getElementById(i);
     			current_row.innerText = '';
     			current_row.appendChild(gen(result[8][i]));
