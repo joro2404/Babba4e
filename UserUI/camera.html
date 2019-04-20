@@ -190,7 +190,7 @@
     	let table = '<table class="table table-dark"><tbody>';
     	table += generateRow('Picture', 'Owner', 'Origin');
     	let i = 0;
-    	while(result[6][i] != 0) {
+    	while(result[6][i] != 0 && result[6][i] !== undefined) {
     		table += generateRow(i, hexToStr(result[6][i]), hexToStr(result[10][i]));
     		i++;  
     	}
